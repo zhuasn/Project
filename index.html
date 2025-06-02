@@ -4,69 +4,232 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PC Byte - Homepage</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="top-bar">
-            <img src="" alt="PC Byte Logo">
-            <div class="search-box">
-                <input type="text" placeholder="Search...">
+        <div class="wrapper">
+            <div class="top-bar">
+                <img src="" alt="PC Byte Logo">
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="icons">
+                    <img src="icons/location.svg" class="icon" alt="Location">
+                    <img src="icons/user.svg" class="icon" alt="User">
+                    <img src="icons/cart.svg" class="icon" alt="Cart">
+                </div>
             </div>
-            <div class="icons">
-                <!-- location, user, cart icons-->
+            <div class="nav-bar">
+                <button class="category-button">Categories</button>
+                <ul class="nav-links">
+                    <li>Hot Deals</li>
+                    <li>New Arrivals</li>
+                    <li>All Categories</li>
+                    <li>All Brands</li>
+                </ul>
             </div>
-        </div>
-        <div class="nav-bar">
-            <button class="category-button">Categories</button>
-            <ul class="nav-links">
-                <li>Hot Deals</li>
-                <li>New Arrivals</li>
-                <li>All Categories</li>
-                <li>All Brands</li>
-            </ul>
         </div>
     </header>
-    <section class="banner">
-        <div class="banner-main">[Main Banner image placeholder]</div>
-        <div class="banner-side">
-            <div class="banner-1">[Banner 1]</div>
-            <div class="banner-2"></div>
+
+    <main>
+        <div class="wrapper">
+            <section class="hero">
+                <div class="banner-main">[Main Banner image placeholder]</div>
+                <div class="banner-side">
+                    <div class="banner-1">[Banner 1]</div>
+                    <div class="banner-2">[Banner 2]</div>
+                </div>
+            </section>
+
+            <section class="featured-categories">
+                <h2>Featured Categories</h2>
+                <div class="category-list">
+                    <div>Gaming PCs</div>
+                    <div>Speakers</div>
+                    <div>Monitors</div>
+                    <div>SSD</div>
+                    <div>CPU</div>
+                    <div>Headphones</div>
+                    <div class="view-all-card">
+                        <div class="circle">+</div>
+                        <div>View All</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="most-popular">
+                <div class="section-heading">
+                    <h2>Most Popular</h2>
+                    <a href="#" class="view-all-link">View All +</a>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="image-placeholder"></div>
+                        <div class="name">Product Name</div>
+                        <div class="price-status">
+                            <span class="price">$999</span>
+                            <span class="status">Instant Pickup</span>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="image-placeholder"></div>
+                        <div class="name">Product Name</div>
+                        <div class="price-status">
+                            <span class="price">$999</span>
+                            <span class="status">In Stock</span>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="image-placeholder"></div>
+                        <div class="name">Product Name</div>
+                        <div class="price-status">
+                            <span class="price">$999</span>
+                            <span class="status">Online Only</span>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="image-placeholder"></div>
+                        <div class="name">Product Name</div>
+                        <div class="price-status">
+                            <span class="price">$999</span>
+                            <span class="status">Limited</span>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="image-placeholder"></div>
+                        <div class="name">Product Name</div>
+                        <div class="price-status">
+                            <span class="price">$999</span>
+                            <span class="status">Low Stock</span>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="trending">
+                <div class="section-heading">
+                    <h2>What's Trending</h2>
+                    <a href="#" class="view-all-link">View All +</a>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="image-placeholder"></div>
+                        <div class="name">Product Name</div>
+                        <div class="price-status">
+                            <span class="price">$999</span>
+                            <span class="status">Instant Pickup</span>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="image-placeholder"></div>
+                        <div class="name">Product Name</div>
+                        <div class="price-status">
+                            <span class="price">$999</span>
+                            <span class="status">Online Only</span>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="image-placeholder"></div>
+                        <div class="name">Product Name</div>
+                        <div class="price-status">
+                            <span class="price">$999</span>
+                            <span class="status">Low Stock</span>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="image-placeholder"></div>
+                        <div class="name">Product Name</div>
+                        <div class="price-status">
+                            <span class="price">$999</span>
+                            <span class="status">Online Only</span>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="image-placeholder"></div>
+                        <div class="name">Product Name</div>
+                        <div class="price-status">
+                            <span class="price">$999</span>
+                            <span class="status">Instant Pickup</span>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="promotions">
+                <div class="section-heading">
+                    <h2>Promotions</h2>
+                    <a href="#" class="view-all-link">View All +</a>
+                </div>
+                <div class="promotion-banners">
+                    <div class="banner">Banner 1</div>
+                    <div class="banner">Banner 2</div>
+                    <div class="banner">Banner 3</div>
+                    <div class="banner">Banner 4</div>
+                    <div class="banner">Banner 5</div>
+                </div>
+            </section>
+
+            <section class="delivery-info">
+                <h3>Instore Pick Up or Delivery!</h3>
+                <p>
+                    Shop Online for Everything Computers + New Categories Added Every Day!<br>
+                    Get Instore Pick Up from over 10+ Locations<br>
+                    or Australia Wide Delivery to your doorstep.
+                </p>
+                <input type="text" placeholder="Search your location">
+                <button>Search</button>
+            </section>
         </div>
-    </section>
-    <section class="featured-categories">
-        <h2>Featured Categories</h2>
-        <div class="category-list">
-            <div>Gaming PCs</div>
-            <div>Speakers</div>
-            <div>Monitors</div>
-            <div>SSD</div>
-            <div>CPU</div>
-            <div>Headphones</div>
-            <div class="view-all-card">
-                <div class="circle">+</div>
-                <div>View All</div>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div>
+                <h4>Get to know us</h4>
+                <ul>
+                    <li>Store Locations</li>
+                    <li>Careers</li>
+                    <li>Blogs</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Shop With Us</h4>
+                <ul>
+                    <li>My Account</li>
+                    <li>Track Orders</li>
+                    <li>Returns & Refunds</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Let Us Help You</h4>
+                <ul>
+                    <li>Contact Us</li>
+                    <li>Help Centre</li>
+                    <li>Warranty</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Social</h4>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                </ul>
             </div>
         </div>
-    </section>
-    <section class="most-popular">
-        <h2>Most Popular</h2>
-        <div class="product-grid">
-            <div class="product-card"><div class="image1"></div><div class="name">Product Name</div><div class="price">$xxx</div><button>Add To Cart</button></div>
-            <div class="product-card"><div class="image1"></div><div class="name">Product Name</div><div class="price">$xxx</div><button>Add To Cart</button></div>
-            <div class="product-card"><div class="image1"></div><div class="name">Product Name</div><div class="price">$xxx</div><button>Add To Cart</button></div>
-            <div class="product-card"><div class="image1"></div><div class="name">Product Name</div><div class="price">$xxx</div><button>Add To Cart</button></div>
-            <div class="product-card"><div class="image1"></div><div class="name">Product Name</div><div class="price">$xxx</div><button>Add To Cart</button></div>
-        </div>
-    </section>
-    <section class="trending">
-        <h2>What's Trending?</h2>
-        <div class="product-grid">
-            <div class="product-card"><div class="image1"></div><div class="name">Product Name</div><div class="price">$xxx</div><button>Add To Cart</button></div>
-            <div class="product-card"><div class="image1"></div><div class="name">Product Name</div><div class="price">$xxx</div><button>Add To Cart</button></div>
-            <div class="product-card"><div class="image1"></div><div class="name">Product Name</div><div class="price">$xxx</div><button>Add To Cart</button></div>
-            <div class="product-card"><div class="image1"></div><div class="name">Product Name</div><div class="price">$xxx</div><button>Add To Cart</button></div>
-            <div class="product-card"><div class="image1"></div><div class="name">Product Name</div><div class="price">$xxx</div><button>Add To Cart</button></div>
-        </div>
-    </section>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
