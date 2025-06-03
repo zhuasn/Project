@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PC Byte - Homepage</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
+
 <body>
     <header>
         <div class="wrapper">
             <div class="top-bar">
-                <img src="" alt="PC Byte Logo">
+                <img src="image/Logo.png" alt="PC Byte Logo">
                 <div class="search-box">
+                    <img src="icons/search.svg" alt="Search Icon" class="search-icon">
                     <input type="text" placeholder="Search...">
                 </div>
                 <div class="icons">
-                    <img src="icons/location.svg" class="icon" alt="Location">
-                    <img src="icons/user.svg" class="icon" alt="User">
-                    <img src="icons/cart.svg" class="icon" alt="Cart">
+                    <img src="icons/map-pin.svg" class="icon" alt="Location">
+                    <img src="icons/Account--Streamline-Atlas.svg" class="icon" alt="User">
+                    <img src="icons/shopping-cart.svg" class="icon" alt="Cart">
                 </div>
             </div>
             <div class="nav-bar">
-                <button class="category-button">Categories</button>
+                <button class="category-button">
+                    <img src="icons/categories.svg" alt="Categories" class="icon" />
+                </button>
                 <ul class="nav-links">
                     <li>Hot Deals</li>
                     <li>New Arrivals</li>
@@ -33,203 +39,311 @@
     </header>
 
     <main>
-        <div class="wrapper">
-            <section class="hero">
-                <div class="banner-main">[Main Banner image placeholder]</div>
-                <div class="banner-side">
-                    <div class="banner-1">[Banner 1]</div>
-                    <div class="banner-2">[Banner 2]</div>
-                </div>
-            </section>
+        <section class="hero">
+            <div class="wrapper">
+                <div class="hero-content">
+                    <div class="banner-carousel">
+                        <div class="carousel-track" id="carouselTrack">
+                            <img src="image/Bbanner1.png" alt="Banner 1">
+                            <img src="image/Bbanner2.webp" alt="Banner 2">
+                        </div>
+                        <div class="carousel-dots">
+                            <span class="carousel-dot active" data-slide="0"></span>
+                            <span class="carousel-dot" data-slide="1"></span>
+                        </div>
+                    </div>
 
-            <section class="featured-categories">
-                <h2>Featured Categories</h2>
-                <div class="category-list">
-                    <div>Gaming PCs</div>
-                    <div>Speakers</div>
-                    <div>Monitors</div>
-                    <div>SSD</div>
-                    <div>CPU</div>
-                    <div>Headphones</div>
-                    <div class="view-all-card">
-                        <div class="circle">+</div>
-                        <div>View All</div>
+                    <div class="banner-side">
+                        <div class="banner-1">
+                            <img src="image/Sbanner1.webp" alt="Small Banner 1">
+                        </div>
+                        <div class="banner-2">
+                            <img src="image/Sbanner2.webp" alt="Small Banner 2">
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="most-popular">
+        <section class="featured-categories">
+            <div class="wrapper">
+                <h2>Featured Categories</h2>
+                <div class="category-list">
+                    <div class="category-item">
+                        <img src="image/Cimage1.png" alt="Gaming PCs">
+                        <span>Gaming PCs</span>
+                    </div>
+                    <div class="category-item speakers">
+                        <img src="image/Cimage2.png" alt="Speakers">
+                        <span>Speakers/Audio System</span>
+                    </div>
+                    <div class="category-item">
+                        <img src="image/Cimage3.png" alt="Monitors">
+                        <span>Monitors</span>
+                    </div>
+                    <div class="category-item">
+                        <img src="image/Cimage4.png" alt="SSD">
+                        <span>SSD Hard Drives</span>
+                    </div>
+                    <div class="category-item">
+                        <img src="image/Cimage5.png" alt="SSD">
+                        <span>CPU Processors</span>
+                    </div>
+                    <div class="category-item">
+                        <img src="image/Cimage6.png" alt="Headphones">
+                        <span>Headphones</span>
+                    </div>
+                    <div class="view-all-card">
+                        <img src="icons/view all.svg" alt="View All" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="most-popular">
+            <div class="wrapper">
                 <div class="section-heading">
                     <h2>Most Popular</h2>
                     <a href="#" class="view-all-link">View All +</a>
                 </div>
                 <div class="product-grid">
                     <div class="product-card">
-                        <div class="image-placeholder"></div>
-                        <div class="name">Product Name</div>
+                        <img class="product-image" src="image/P1.png" alt="Gigabyte 5080">
+                        <div class="name">Gigabyte GeForce RTX 5080 Gaming OC 16G Graphics Card</div>
                         <div class="price-status">
-                            <span class="price">$999</span>
+                            <div class="price-group">
+                                <span class="price">$2499</span>
+                                <span class="original-price">$2599</span>
+                            </div>
                             <span class="status">Instant Pickup</span>
                         </div>
                         <button>Add To Cart</button>
                     </div>
+
                     <div class="product-card">
-                        <div class="image-placeholder"></div>
-                        <div class="name">Product Name</div>
+                        <img class="product-image" src="image/P2.png" alt="Asus Black Keyboard">
+                        <div class="name">Asus ROG Strix Scope II 96 RGB Wireless Black Mechanical</div>
                         <div class="price-status">
-                            <span class="price">$999</span>
-                            <span class="status">In Stock</span>
+                            <div class="price-group">
+                                <span class="price">$239</span>
+                            </div>
+                            <span class="status">Instant Pickup</span>
                         </div>
                         <button>Add To Cart</button>
                     </div>
+
                     <div class="product-card">
-                        <div class="image-placeholder"></div>
-                        <div class="name">Product Name</div>
+                        <img class="product-image" src="image/P3.png" alt="Asus White Keyboard">
+                        <div class="name">Asus ROG Strix Scope II 96 Wireless White Mechanical</div>
                         <div class="price-status">
-                            <span class="price">$999</span>
-                            <span class="status">Online Only</span>
+                            <div class="price-group">
+                                <span class="price">$239</span>
+                            </div>
+                            <span class="status">Instant Pickup</span>
                         </div>
                         <button>Add To Cart</button>
                     </div>
+
                     <div class="product-card">
-                        <div class="image-placeholder"></div>
-                        <div class="name">Product Name</div>
+                        <img class="product-image" src="image/P4.png" alt="Intel NUC Mini">
+                        <div class="name">L5 NUC Intel i5 1240P 1TB SSD 16GB RAM Windows 11 Pro Mini</div>
                         <div class="price-status">
-                            <span class="price">$999</span>
-                            <span class="status">Limited</span>
+                            <div class="price-group">
+                                <span class="price">$949</span>
+                                <span class="original-price">$979</span>
+                            </div>
+                            <span class="status">Instant Pickup</span>
                         </div>
                         <button>Add To Cart</button>
                     </div>
+
                     <div class="product-card">
-                        <div class="image-placeholder"></div>
-                        <div class="name">Product Name</div>
+                        <img class="product-image" src="image/P5.png" alt="MSI 4060 PC" />
+                        <div class="name">G5 Ryzen 5 7600 GeForce RTX 4060 Ti Gaming PC - Powered by MSI 58340</div>
                         <div class="price-status">
-                            <span class="price">$999</span>
-                            <span class="status">Low Stock</span>
+                            <div class="price-group">
+                                <span class="price">$1999</span>
+                                <span class="original-price">$2099</span>
+                            </div>
+                            <span class="status">Instant Pickup</span>
                         </div>
                         <button>Add To Cart</button>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="trending">
+
+        <section class="trending">
+            <div class="wrapper">
                 <div class="section-heading">
                     <h2>What's Trending</h2>
                     <a href="#" class="view-all-link">View All +</a>
                 </div>
                 <div class="product-grid">
                     <div class="product-card">
-                        <div class="image-placeholder"></div>
-                        <div class="name">Product Name</div>
+                        <img class="product-image" src="image/T1.png" alt="DT770 Pro Headphones">
+                        <div class="name">Beyerdynamic DT770 Pro Closed Reference Studio Headphones</div>
                         <div class="price-status">
-                            <span class="price">$999</span>
+                            <div class="price-group">
+                                <span class="price">$269</span>
+                                <span class="original-price">$299</span>
+                            </div>
                             <span class="status">Instant Pickup</span>
                         </div>
                         <button>Add To Cart</button>
                     </div>
+
                     <div class="product-card">
-                        <div class="image-placeholder"></div>
-                        <div class="name">Product Name</div>
+                        <img class="product-image" src="image/T2.png" alt="Games Workshop">
+                        <div class="name">Games Workshop 50-17 Orks: Killa Kans (99120103085)</div>
                         <div class="price-status">
-                            <span class="price">$999</span>
-                            <span class="status">Online Only</span>
-                        </div>
-                        <button>Add To Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <div class="image-placeholder"></div>
-                        <div class="name">Product Name</div>
-                        <div class="price-status">
-                            <span class="price">$999</span>
-                            <span class="status">Low Stock</span>
-                        </div>
-                        <button>Add To Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <div class="image-placeholder"></div>
-                        <div class="name">Product Name</div>
-                        <div class="price-status">
-                            <span class="price">$999</span>
-                            <span class="status">Online Only</span>
-                        </div>
-                        <button>Add To Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <div class="image-placeholder"></div>
-                        <div class="name">Product Name</div>
-                        <div class="price-status">
-                            <span class="price">$999</span>
+                            <div class="price-group">
+                                <span class="price">$60</span>
+                            </div>
                             <span class="status">Instant Pickup</span>
                         </div>
                         <button>Add To Cart</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img class="product-image" src="image/T3.png" alt="Asus USB Adapter">
+                        <div class="name">Asus AC1200 Wireless USB Adapter (USB-AC53-NANO)</div>
+                        <div class="price-status">
+                            <div class="price-group">
+                                <span class="price">$29</span>
+                                <span class="original-price">$48</span>
+                            </div>
+                            <span class="status">Instant Pickup</span>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img class="product-image" src="image/T4.png" alt="ADATA HD710 Drive">
+                        <div class="name">ADATA HD710 Durable Waterproof Shock Resistant 4TB</div>
+                        <div class="price-status">
+                            <div class="price-group">
+                                <span class="price">$199</span>
+                            </div>
+                            <span class="status">Instant Pickup</span>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img class="product-image" src="image/T5.png" alt="Seagate SkyHawk HDD">
+                        <div class="name">Seagate SkyHawk 6TB 3.5in SATA Surveillance HDD</div>
+                        <div class="price-status">
+                            <div class="price-group">
+                                <span class="price">$255</span>
+                            </div>
+                            <span class="status">At Other Store</span>
+                        </div>
+                        <button class="out-of-stock">Out Of Stock</button>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="promotions">
+        <section class="promotions">
+            <div class="wrapper">
                 <div class="section-heading">
                     <h2>Promotions</h2>
                     <a href="#" class="view-all-link">View All +</a>
                 </div>
                 <div class="promotion-banners">
-                    <div class="banner">Banner 1</div>
-                    <div class="banner">Banner 2</div>
-                    <div class="banner">Banner 3</div>
-                    <div class="banner">Banner 4</div>
-                    <div class="banner">Banner 5</div>
+                    <div class="banner">
+                        <img src="image/Promotion1.png" alt="Promotion1">
+                    </div>
+                    <div class="banner">
+                        <img src="image/Promotion2.png" alt="Promotion2">
+                    </div>
+                    <div class="banner">
+                        <img src="image/Promotion3.png" alt="Promotion3">
+                    </div>
+                    <div class="banner">
+                        <img src="image/Promotion4.png" alt="Promotion4">
+                    </div>
+                    <div class="banner">
+                        <img src="image/Promotion5.png" alt="Promotion5">
+                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="delivery-info">
+        <section class="delivery-info">
+            <div class="wrapper">
                 <h3>Instore Pick Up or Delivery!</h3>
-                <p>
-                    Shop Online for Everything Computers + New Categories Added Every Day!<br>
-                    Get Instore Pick Up from over 10+ Locations<br>
-                    or Australia Wide Delivery to your doorstep.
-                </p>
-                <input type="text" placeholder="Search your location">
-                <button>Search</button>
-            </section>
-        </div>
+                <div class="delivery-text">
+                    <p>Shop Online for Everything Computers + New Categories Added Every Day!</p>
+                    <p>Get Instore Pick Up from over 10+ Locations</p>
+                    <p>or Australia Wide Delivery to your doorstep.</p>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Search your location">
+                    <img src="icons/map-pin.svg" alt="Location Icon" class="search-icon">
+                    <button>Search</button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
+        <div class="footer-topbar">
+            <p class="help-text">We're here to help! Click here to contact Customer Service</p>
+            <div class="footer-actions">
+                <span class="help-centre">Help centre</span>
+                <span class="contact-us">Contact us</span>
+            </div>
+        </div>
         <div class="footer-columns">
-            <div>
+            <div class="footer-column">
                 <h4>Get to know us</h4>
                 <ul>
-                    <li>Store Locations</li>
+                    <li>Store Locations & Hours</li>
                     <li>Careers</li>
                     <li>Blogs</li>
                 </ul>
             </div>
-            <div>
+            <div class="footer-column">
                 <h4>Shop With Us</h4>
                 <ul>
-                    <li>My Account</li>
-                    <li>Track Orders</li>
-                    <li>Returns & Refunds</li>
+                    <li>PC Parts</li>
+                    <li>Laptops & Computers</li>
+                    <li>Mobile Phones & Digital</li>
+                    <li>Household Appliances</li>
+                    <li>Kitchenware, Home & Pets</li>
+                    <li>Automobile Accessories</li>
+                    <li>Sports & Outdoors</li>
+                    <li>Toys, Kids & Baby</li>
+                    <li>Hobby and Crafts</li>
+                    <li>Promotions</li>
                 </ul>
             </div>
-            <div>
+            <div class="footer-column">
                 <h4>Let Us Help You</h4>
                 <ul>
-                    <li>Contact Us</li>
+                    <li>FAQs</li>
                     <li>Help Centre</li>
-                    <li>Warranty</li>
+                    <li>Payment Methods</li>
+                    <li>Returns & Warranty</li>
+                    <li>Shipping</li>
+                    <li>Contact Us</li>
                 </ul>
             </div>
-            <div>
+            <div class="footer-column social-column">
                 <h4>Social</h4>
                 <ul>
                     <li>Facebook</li>
                     <li>Instagram</li>
-                    <li>Twitter</li>
+                    <li>YouTube</li>
                 </ul>
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
+
 </html>
