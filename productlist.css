@@ -140,8 +140,166 @@
 }
 
 .product-list-content .product-grid {
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card .product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.product-card .product-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card .name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.product-card .price-status {
+  margin-bottom: 15px;
+}
+
+.product-card .price-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.product-card .price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #F08703;
+}
+
+.product-card .original-price {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.product-card .product-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.product-card .status {
+  font-size: 12px;
+  color: #28a745;
+}
+
+.product-card button {
+  width: 100%;
+  padding: 10px;
+  background-color: #F08703;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.product-card button:hover {
+  background-color: #e07a00;
+}
+
+.product-card button.out-of-stock {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* List view styles */
+.product-list-content .product-grid.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.product-grid.list-view .product-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 15px;
+  width: 100%;
+  height: auto;
+  gap: 20px;
+}
+
+.product-grid.list-view .product-card .product-image {
+  width: 100px;
+  height: 90px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.product-grid.list-view .product-card .product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+.product-grid.list-view .product-card .name {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.product-grid.list-view .product-card .price-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.product-grid.list-view .product-card .product-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
+}
+
+.product-grid.list-view .product-card .status {
+  font-size: 13px;
+  color: #28a745;
+  white-space: nowrap;
+}
+
+.product-grid.list-view .product-card button {
+  width: 120px;
 }
 
 .pagination {
@@ -190,14 +348,14 @@
 }
 
 .custom-gaming-info h2 {
-  font-size: 22px;
+  font-size: 26px;
   color: #333;
   margin-bottom: 16px;
   font-weight: 600;
 }
 
 .custom-gaming-info h3 {
-  font-size: 18px;
+  font-size: 20px;
   color: #333;
   margin: 30px 0 10px 0;
   font-weight: 600;
@@ -261,4 +419,36 @@ header {
   z-index: 100;
   position: relative;
   background: #fff;
+}
+
+.product-grid.list-view .product-card .product-image {
+  width: 100px;
+  height: 90px;
+  object-fit: contain;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+.product-grid.list-view .product-card .product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-grid.list-view .product-card .price-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+.product-grid.list-view .product-card .product-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  margin-left: 20px;
+}
+.product-grid.list-view .product-card .status {
+  font-size: 13px;
+  color: #28a745;
+  white-space: nowrap;
 }
