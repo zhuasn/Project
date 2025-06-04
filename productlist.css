@@ -1,0 +1,264 @@
+.products-page {
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.breadcrumb span {
+  cursor: pointer;
+}
+
+.breadcrumb span:last-child {
+  color: #F08703;
+  font-weight: 500;
+}
+
+.product-list-container {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.product-filters {
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.filter-group {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.filter-group h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.filter-expand {
+  font-size: 18px;
+  color: #999;
+  font-weight: bold;
+}
+
+.product-list-content {
+  flex: 1;
+}
+
+.product-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.sort-by {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-by span {
+  font-size: 14px;
+  color: #666;
+  font-weight: 600;
+}
+
+.sort-by select {
+  padding: 7px 15px;
+  border: 1.15px solid #F08703;
+  border-radius: 6px;
+  font-size: 13px;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  appearance: none;
+  background-image: url('icons/chevron-down.svg');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 18px; 
+  padding-right: 25px; 
+  cursor: pointer;
+}
+
+.view-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.view-controls span {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.view-controls span:hover {
+  color: #F08703;
+}
+
+.view-controls span:first-child.active {
+  color: #F08703;
+  font-weight: bold;
+}
+
+.view-controls span:not(:first-child):not(.view-grid):not(.view-list).active {
+  color: #666;
+  font-weight: normal;
+  background-color: transparent;
+}
+
+.view-grid, .view-list {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.view-grid.active, .view-list.active {
+  background-color: #F08703;
+}
+
+.view-grid.active img, .view-list.active img {
+  filter: brightness(0) invert(1);
+}
+
+.product-list-content .product-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 8px;
+}
+
+.pagination span {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.pagination span:hover {
+  color: #F08703;
+}
+
+.pagination span:first-child.active {
+  background-color: #F08703;
+  color: white;
+  font-weight: bold;
+}
+
+.pagination span:not(:first-child).active {
+  background-color: transparent;
+  color: #666;
+  font-weight: normal;
+}
+
+.custom-gaming-info {
+  margin: 60px 0;
+  font-family: "Helvetica", sans-serif;
+  background-color: #fff7e6;
+  border-radius: 12px;
+  padding: 50px 40px;
+}
+
+.custom-gaming-info h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.custom-gaming-info h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 30px 0 10px 0;
+  font-weight: 600;
+}
+
+.custom-gaming-info p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  max-width: 1000px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 450;
+  transition: color 0.2s ease;
+}
+
+.nav-links li:hover {
+  color: #F08703;
+  text-decoration: underline;
+}
+
+.nav-links li.active {
+  color: #F08703;
+  font-weight: 500;
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search-box input[type="text"] {
+  width: 420px;
+  height: 39px;
+  padding: 5px 40px 4px 12px;
+  border: 1.15px solid #F08703;
+  border-radius: 6px;
+}
+
+.search-icon {
+  position: absolute;
+  right: calc(50% - 210px + 12px);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+main.products-page {
+  margin-top: 0;
+  padding-top: 40px;
+}
+
+header {
+  z-index: 100;
+  position: relative;
+  background: #fff;
+}

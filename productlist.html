@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Byte - Gaming PCs</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="productlist.css">
+    <script src="homepage.js"></script>
+    <script src="productlist.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="top-bar">
+                <img src="image/Logo.png" alt="PC Byte Logo">
+                <div class="search-box">
+                    <img src="icons/search.svg" alt="Search Icon" class="search-icon">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="icons">
+                    <img src="icons/map-pin.svg" class="icon" alt="Location">
+                    <img src="icons/Account--Streamline-Atlas.svg" class="icon" alt="User">
+                    <div class="cart-wrapper">
+                        <img src="icons/shopping-cart.svg" class="icon" alt="Cart">
+                        <span class="cart-count" id="cartCount">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <div class="dropdown-wrapper">
+                    <button class="category-button">
+                        <img src="icons/categories.svg" alt="Categories" class="icon" />
+                    </button>
+                    <div class="dropdown-panel">
+                        <ul class="main-menu">
+                            <li class="main-item" data-category="pc-parts">
+                                PC Parts
+                                <div class="mega-menu">
+                                    <div class="submenu-row">
+                                        <div class="submenu-column">
+                                            <h5>Computer Parts</h5>
+                                            <ul>
+                                                <li>Cases</li>
+                                                <li>Cooling</li>
+                                                <li>CPU Processors</li>
+                                                <li>Fans and Accessories</li>
+                                                <li>Graphics Cards / GPU</li>
+                                                <li>Memory (RAM)</li>
+                                                <li>Motherboards</li>
+                                                <li>NUC, Brix & Mini PCs</li>
+                                                <li>Power Supply / PSU</li>
+                                                <li>Sound Cards</li>
+                                                <li>Water Cooling</li>
+                                                <li>Water Cooling Fittings</li>
+                                            </ul>
+                                        </div>
+                                        <div class="submenu-column">
+                                            <h5>Networking</h5>
+                                            <ul>
+                                                <li>Antennas</li>
+                                                <li>Ethernet Over Power / Powerline</li>
+                                                <li>Fiber Convertor</li>
+                                                <li>Modem Routers</li>
+                                                <li>Network Adapters</li>
+                                                <li>Networking Accessories</li>
+                                                <li>Routers</li>
+                                                <li>Switches</li>
+                                                <li>Wifi Range Extenders</li>
+                                                <li>Wireless Access Points (WAP)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="submenu-column">
+                                            <h5>Storage Devices</h5>
+                                            <ul>
+                                                <li>Blank Media Discs</li>
+                                                <li>CD/DVD Burners Optical Drive</li>
+                                                <li>Enclosures & Docking</li>
+                                                <li>External Hard Drives</li>
+                                                <li>External SSD Hard Drives</li>
+                                                <li>Hard Drives / HDD</li>
+                                                <li>NAS - Network Storage</li>
+                                                <li>SSD Hard Drives</li>
+                                                <li>USB Drives & SD Cards</li>
+                                            </ul>
+                                        </div>
+                                        <div class="submenu-column">
+                                            <h5>PC Accessories</h5>
+                                            <ul>
+                                                <li>Add On Cards</li>
+                                                <li>Cables</li>
+                                                <li>Computer Accessories</li>
+                                                <li>Display Adapters</li>
+                                                <li>KVM</li>
+                                                <li>UPS & Power Protection</li>
+                                                <li>USB Hubs</li>
+                                                <li>Video & TV Capture</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="submenu-row">
+                                        <div class="submenu-column">
+                                            <h5>Peripherals</h5>
+                                            <ul>
+                                                <li>Ambient Light</li>
+                                                <li>Graphics Tablet</li>
+                                                <li>Headphones</li>
+                                                <li>Keyboards</li>
+                                                <li>Monitors</li>
+                                                <li>Mouse & Mouse Pads</li>
+                                                <li>Projectors</li>
+                                                <li>Racing Simulators</li>
+                                                <li>Web Cams</li>
+                                            </ul>
+                                        </div>
+                                        <div class="submenu-column">
+                                            <h5>Printers & Scanners</h5>
+                                            <ul>
+                                                <li>3D Printers</li>
+                                                <li>Dot Matrix Printers</li>
+                                                <li>Inkjet Printers</li>
+                                                <li>Laser Engravers</li>
+                                                <li>Laser Printers</li>
+                                                <li>Multifunction Printers</li>
+                                                <li>Paper</li>
+                                                <li>Printer Accessories</li>
+                                                <li>Printer Ink / Cartridges</li>
+                                                <li>Scanners</li>
+                                            </ul>
+                                        </div>
+                                        <div class="submenu-column">
+                                            <h5>Software & Services</h5>
+                                            <ul>
+                                                <li>Accounting & Finance</li>
+                                                <li>Anti Virus & Security</li>
+                                                <li>Business & Office</li>
+                                                <li>Design & illustration</li>
+                                                <li>Mac Software</li>
+                                                <li>Operating Systems</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="main-item">Laptops & Computers</li>
+                            <li class="main-item">Mobile Phones & Digital</li>
+                            <li class="main-item">Household Appliances</li>
+                            <li class="main-item">Kitchenware, Home & Pets</li>
+                            <li class="main-item">Automobile Accessories</li>
+                            <li class="main-item">Sports & Outdoors</li>
+                            <li class="main-item">Toys, Kids & Baby</li>
+                            <li class="main-item">Hobby and Crafts</li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li>Hot Deals</li>
+                    <li>New Arrivals</li>
+                    <li>All Categories</li>
+                    <li>All Brands</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="products-page">
+        <div class="wrapper">
+            <div class="breadcrumb">
+                <span>Computer Categories</span> &gt; <span>Gaming PCs Ready-to-Go</span>
+            </div>
+
+            <div class="product-list-container">
+                <div class="product-filters">
+                    <div class="filter-group">
+                        <h3>Brands</h3>
+                        <div class="filter-expand">+</div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Brand Level</h3>
+                        <div class="filter-expand">+</div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Promotions</h3>
+                        <div class="filter-expand">+</div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Operating System</h3>
+                        <div class="filter-expand">+</div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Graphic Card</h3>
+                        <div class="filter-expand">+</div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>RAM</h3>
+                        <div class="filter-expand">+</div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>SSD</h3>
+                        <div class="filter-expand">+</div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>CPU</h3>
+                        <div class="filter-expand">+</div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>CPU Cooling</h3>
+                        <div class="filter-expand">+</div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Series</h3>
+                        <div class="filter-expand">+</div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Powered By</h3>
+                        <div class="filter-expand">+</div>
+                    </div>
+                </div>
+
+                <div class="product-list-content">
+                    <div class="product-controls">
+                        <div class="sort-by">
+                            <span>Sort By</span>
+                            <select>
+                                <option>Most Popular</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                                <option>Newest Arrivals</option>
+                            </select>
+                        </div>
+                        <div class="view-controls">
+                            <span class="active">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>&gt;</span>
+                            <span class="view-grid active"><img src="icons/grid.svg" alt="Grid View"></span>
+                            <span class="view-list"><img src="icons/list.svg" alt="List View"></span>
+                        </div>
+                    </div>
+
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <img class="product-image" src="image/1.png" alt="Gaming PC 1">
+                            <div class="name">White RGB Gaming PC i5 13600K 32GB DDR5 1TB</div>
+                            <div class="price-status">
+                                <div class="price-group">
+                                    <span class="price">$2499</span>
+                                    <span class="original-price">$2599</span>
+                                </div>
+                                <span class="status">Instant Pickup</span>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img class="product-image" src="image/2.png" alt="Gaming PC 2">
+                            <div class="name">Compact RGB Gaming PC i7 13700K 32GB DDR5 1TB</div>
+                            <div class="price-status">
+                                <div class="price-group">
+                                    <span class="price">$2499</span>
+                                    <span class="original-price">$2699</span>
+                                </div>
+                                <span class="status">Instant Pickup</span>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img class="product-image" src="image/3.png" alt="Gaming PC 3">
+                            <div class="name">Black RGB Gaming PC i9 13900K 32GB DDR5 1TB</div>
+                            <div class="price-status">
+                                <div class="price-group">
+                                    <span class="price">$2499</span>
+                                    <span class="original-price">$2799</span>
+                                </div>
+                                <span class="status">Instant Pickup</span>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img class="product-image" src="image/4.png" alt="Gaming PC 4">
+                            <div class="name">White Compact Gaming PC AMD 7950X 32GB DDR5 1TB</div>
+                            <div class="price-status">
+                                <div class="price-group">
+                                    <span class="price">$2499</span>
+                                    <span class="original-price">$2599</span>
+                                </div>
+                                <span class="status">Instant Pickup</span>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img class="product-image" src="image/5.png" alt="Gaming PC 5">
+                            <div class="name">Black Gaming PC i5 13600K 16GB DDR5 512GB</div>
+                            <div class="price-status">
+                                <div class="price-group">
+                                    <span class="price">$2199</span>
+                                    <span class="original-price">$2299</span>
+                                </div>
+                                <span class="status">Instant Pickup</span>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img class="product-image" src="image/6.png" alt="Gaming PC 6">
+                            <div class="name">Black RGB Gaming PC i5 13600K 16GB DDR5 512GB</div>
+                            <div class="price-status">
+                                <div class="price-group">
+                                    <span class="price">$1499</span>
+                                    <span class="original-price">$1599</span>
+                                </div>
+                                <span class="status">Instant Pickup</span>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img class="product-image" src="image/7.png" alt="Gaming PC 7">
+                            <div class="name">White Gaming PC i7 13700K 16GB DDR5 512GB</div>
+                            <div class="price-status">
+                                <div class="price-group">
+                                    <span class="price">$1699</span>
+                                    <span class="original-price">$1799</span>
+                                </div>
+                                <span class="status">Instant Pickup</span>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img class="product-image" src="image/8.png" alt="Gaming PC 8">
+                            <div class="name">Black RGB Gaming PC i9 13900K 16GB DDR5 512GB</div>
+                            <div class="price-status">
+                                <div class="price-group">
+                                    <span class="price">$1899</span>
+                                    <span class="original-price">$1999</span>
+                                </div>
+                                <span class="status">Instant Pickup</span>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img class="product-image" src="image/9.png" alt="Gaming PC 9">
+                            <div class="name">Purple RGB Gaming PC AMD 7950X 16GB DDR5 512GB</div>
+                            <div class="price-status">
+                                <div class="price-group">
+                                    <span class="price">$1699</span>
+                                    <span class="original-price">$1799</span>
+                                </div>
+                                <span class="status">Instant Pickup</span>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img class="product-image" src="image/10.png" alt="Gaming PC 10">
+                            <div class="name">Blue RGB Gaming PC i5 13600K 16GB DDR5 512GB</div>
+                            <div class="price-status">
+                                <div class="price-group">
+                                    <span class="price">$1299</span>
+                                    <span class="original-price">$1399</span>
+                                </div>
+                                <span class="status">Instant Pickup</span>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img class="product-image" src="image/11.png" alt="Gaming PC 11">
+                            <div class="name">Black RGB Gaming PC i7 13700K 16GB DDR5 512GB</div>
+                            <div class="price-status">
+                                <div class="price-group">
+                                    <span class="price">$1499</span>
+                                    <span class="original-price">$1599</span>
+                                </div>
+                                <span class="status">Instant Pickup</span>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img class="product-image" src="image/12.png" alt="Gaming PC 12">
+                            <div class="name">RGB Gaming PC i9 13900K 16GB DDR5 512GB</div>
+                            <div class="price-status">
+                                <div class="price-group">
+                                    <span class="price">$1699</span>
+                                    <span class="original-price">$1799</span>
+                                </div>
+                                <span class="status">Instant Pickup</span>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img class="product-image" src="image/13.png" alt="Gaming PC 13">
+                            <div class="name">Black RGB Gaming PC i7 13700K 32GB DDR5 1TB</div>
+                            <div class="price-status">
+                                <div class="price-group">
+                                    <span class="price">$1899</span>
+                                    <span class="original-price">$1999</span>
+                                </div>
+                                <span class="status">Instant Pickup</span>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img class="product-image" src="image/14.png" alt="Gaming PC 14">
+                            <div class="name">Premium RGB Gaming PC i9 13900K 32GB DDR5 2TB</div>
+                            <div class="price-status">
+                                <div class="price-group">
+                                    <span class="price">$2099</span>
+                                    <span class="original-price">$2299</span>
+                                </div>
+                                <span class="status">Instant Pickup</span>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img class="product-image" src="image/15.png" alt="Gaming PC 15">
+                            <div class="name">Basic Gaming PC i5 12400F 16GB DDR4 512GB</div>
+                            <div class="price-status">
+                                <div class="price-group">
+                                    <span class="price">$999</span>
+                                    <span class="original-price">$1099</span>
+                                </div>
+                                <span class="status">Instant Pickup</span>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img class="product-image" src="image/16.png" alt="Gaming PC 16">
+                            <div class="name">White RGB Gaming PC i7 13700K 32GB DDR5 1TB</div>
+                            <div class="price-status">
+                                <div class="price-group">
+                                    <span class="price">$1999</span>
+                                    <span class="original-price">$2199</span>
+                                </div>
+                                <span class="status">Instant Pickup</span>
+                            </div>
+                            <button>Add To Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="pagination">
+                        <span class="active">1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>&gt;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-gaming-info">
+                <h2>Custom gaming PCs</h2>
+                <p>Pick the parts of your dream PC or let MSY determine the powerpack with a prebuilt gaming PC that's
+                    built to perform.</p>
+
+                <h3>PC part picker</h3>
+                <p>If you're a savvy PC gamer, you already have the perfect PC parts in mind. Customize all your
+                    preferred PC parts. Start with a motherboard, processor, CPU cooler and RAM. Then add a graphics
+                    card, power supply, case and a power supply. Then top MSY off with a disk or two.</p>
+
+                <h3>Prebuilt Gaming PCs</h3>
+                <p>For the gamer that wants to focus on leveling up rather than picking parts, MSY offers a range of
+                    prebuilt gaming PCs that are ready to game straight out of the box. These range from entry-level to
+                    high-end rigs that will handle anything you can throw at them.</p>
+
+                <h3>The advantages of a gaming PC over a console</h3>
+                <p>PCs are completely customizable and upgradable. If you're on a budget, you can start with a basic
+                    gaming PC and upgrade components as you go. Unlike consoles, you have the freedom to swap out parts
+                    as technology advances or your gaming needs change.</p>
+
+                <h3>Game performance and graphics</h3>
+                <p>Gaming PCs offer superior graphics capabilities compared to consoles. With high-end GPUs, you can
+                    enjoy games at higher resolutions (1440p, 4K or even 8K), faster frame rates (144Hz or higher), and
+                    with more graphical details. PC gaming also offers more customization options for graphics settings,
+                    allowing you to balance performance and visuals according to your preferences.</p>
+
+                <h3>Versatility</h3>
+                <p>A gaming PC isn't just for gaming - it's a multi-purpose machine. You can use it for work, content
+                    creation, streaming, web browsing, and more. This versatility makes a gaming PC a more practical
+                    investment for many users compared to a dedicated gaming console.</p>
+
+                <h3>Game library and backwards compatibility</h3>
+                <p>PC gaming offers access to a vast library of games spanning decades, with excellent backward
+                    compatibility. Digital distribution platforms like Steam, Epic Games Store, and GOG offer thousands
+                    of titles, frequent sales, and often better prices than console games. Additionally, many PC games
+                    support modding, extending the lifespan and replayability of your favorite titles.</p>
+
+                <h3>Input options</h3>
+                <p>While consoles are primarily designed for controller use, PC gaming gives you more input flexibility.
+                    You can choose between keyboard and mouse (which offers more precision for certain genres like FPS
+                    and strategy games), or connect various controllers including Xbox, PlayStation, and specialty
+                    gaming peripherals.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-topbar">
+            <p class="help-text">We're here to help! Click here to contact Customer Service</p>
+            <div class="footer-actions">
+                <span class="help-centre">Help centre</span>
+                <span class="contact-us">Contact us</span>
+            </div>
+        </div>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h4>Get to know us</h4>
+                <ul>
+                    <li>Store Locations & Hours</li>
+                    <li>Careers</li>
+                    <li>Blogs</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Shop With Us</h4>
+                <ul>
+                    <li>PC Parts</li>
+                    <li>Laptops & Computers</li>
+                    <li>Mobile Phones & Digital</li>
+                    <li>Household Appliances</li>
+                    <li>Kitchenware, Home & Pets</li>
+                    <li>Automobile Accessories</li>
+                    <li>Sports & Outdoors</li>
+                    <li>Toys, Kids & Baby</li>
+                    <li>Hobby and Crafts</li>
+                    <li>Promotions</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Let Us Help You</h4>
+                <ul>
+                    <li>FAQs</li>
+                    <li>Help Centre</li>
+                    <li>Payment Methods</li>
+                    <li>Returns & Warranty</li>
+                    <li>Shipping</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div class="footer-column social-column">
+                <h4>Social</h4>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
