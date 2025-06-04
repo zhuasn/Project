@@ -32,14 +32,18 @@
 
 .filter-group {
   border-bottom: 1px solid #e5e5e5;
-  padding: 15px 0;
+  padding-bottom: 10px;
+}
+
+.filter-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 0;
   cursor: pointer;
 }
 
-.filter-group h3 {
+.filter-header h3 {
   font-size: 14px;
   font-weight: 500;
   margin: 0;
@@ -451,4 +455,70 @@ header {
   font-size: 13px;
   color: #28a745;
   white-space: nowrap;
+}
+
+
+/* Grid View Fix: price and status on same line */
+.product-grid:not(.list-view) .product-card .price-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.product-grid:not(.list-view) .product-card .price-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0;
+}
+
+.product-grid:not(.list-view) .product-card .status {
+  font-size: 12px;
+  color: #28a745;
+  white-space: nowrap;
+  margin: 0;
+}
+
+/* 确保按钮独立放置 */
+.product-grid:not(.list-view) .product-card .product-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.product-grid:not(.list-view) .product-card button {
+  width: 100%;
+  padding: 10px;
+  background-color: #F08703;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filter-options {
+  display: none;
+  flex-direction: column;
+  padding: 10px 5px 10px 12px;
+  font-size: 13px;
+  color: #333;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.filter-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.filter-options input[type="checkbox"] {
+  accent-color: #F08703;
+  width: 14px;
+  height: 14px;
 }
