@@ -92,8 +92,8 @@
   background-image: url('icons/chevron-down.svg');
   background-repeat: no-repeat;
   background-position: right 10px center;
-  background-size: 18px; 
-  padding-right: 25px; 
+  background-size: 18px;
+  padding-right: 25px;
   cursor: pointer;
 }
 
@@ -130,16 +130,19 @@
   background-color: transparent;
 }
 
-.view-grid, .view-list {
+.view-grid,
+.view-list {
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-.view-grid.active, .view-list.active {
+.view-grid.active,
+.view-list.active {
   background-color: #F08703;
 }
 
-.view-grid.active img, .view-list.active img {
+.view-grid.active img,
+.view-list.active img {
   filter: brightness(0) invert(1);
 }
 
@@ -385,11 +388,6 @@
   text-decoration: underline;
 }
 
-.nav-links li.active {
-  color: #F08703;
-  font-weight: 500;
-}
-
 .search-box {
   flex: 1;
   display: flex;
@@ -432,18 +430,21 @@ header {
   margin-right: 20px;
   flex-shrink: 0;
 }
+
 .product-grid.list-view .product-card .product-info {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .product-grid.list-view .product-card .price-group {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-top: 4px;
 }
+
 .product-grid.list-view .product-card .product-actions {
   display: flex;
   flex-direction: column;
@@ -451,6 +452,7 @@ header {
   gap: 10px;
   margin-left: 20px;
 }
+
 .product-grid.list-view .product-card .status {
   font-size: 13px;
   color: #28a745;
@@ -480,7 +482,6 @@ header {
   margin: 0;
 }
 
-/* 确保按钮独立放置 */
 .product-grid:not(.list-view) .product-card .product-actions {
   display: flex;
   flex-direction: column;
