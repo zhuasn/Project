@@ -54,20 +54,14 @@ body {
   background-color: #e65c00;
 }
 
-/* Mobile CSS Patch for Order Confirmation */
 
-/* Force override any existing styles */
 @media (max-width: 768px) {
-
-  /* Fix for content being hidden behind header - use !important to override */
   body {
     padding-top: 120px !important;
-    /* Reduce padding to appropriate distance */
     margin-top: 0 !important;
     overflow-x: hidden;
   }
 
-  /* Alternative: push the main content down if body padding doesn't work */
   .confirmation-container {
     margin-top: 20px !important;
     /* Reduce margin since body padding is working */
@@ -78,7 +72,6 @@ body {
     box-sizing: border-box;
   }
 
-  /* Content box responsive styling */
   .confirmation-content {
     background-color: #f9f9f9;
     border: 1px solid #eee;
@@ -88,7 +81,6 @@ body {
     box-sizing: border-box;
   }
 
-  /* Title responsive sizing */
   .confirmation-title {
     font-size: 24px;
     font-weight: bold;
@@ -98,7 +90,6 @@ body {
     padding: 0 10px;
   }
 
-  /* Subtitle responsive sizing */
   .confirmation-subtitle {
     font-size: 16px;
     color: #666;
@@ -107,7 +98,6 @@ body {
     padding: 0 10px;
   }
 
-  /* Detail text responsive sizing */
   .confirmation-detail {
     font-size: 14px;
     color: #666;
@@ -116,7 +106,6 @@ body {
     padding: 0 10px;
   }
 
-  /* Button mobile optimization */
   .back-home-button {
     display: inline-block;
     padding: 14px 28px;
@@ -129,7 +118,6 @@ body {
     transition: background-color 0.3s ease;
     margin-top: 10px;
     min-height: 44px;
-    /* iOS recommended touch target */
     box-sizing: border-box;
     -webkit-appearance: none;
     appearance: none;
@@ -145,7 +133,6 @@ body {
     transform: translateY(1px);
   }
 
-  /* Header adjustments for mobile */
   .wrapper {
     padding: 0 15px;
   }
@@ -171,7 +158,6 @@ body {
 
   .search-box input {
     font-size: 16px;
-    /* Prevent zoom on iOS */
     padding: 10px 12px;
     border-radius: 6px;
   }
@@ -186,7 +172,6 @@ body {
     height: 20px;
   }
 
-  /* Navigation adjustments */
   .nav-bar {
     flex-wrap: wrap;
     gap: 10px;
@@ -195,7 +180,6 @@ body {
 
   .nav-links {
     display: none;
-    /* Hide navigation links on mobile to save space */
   }
 
   .category-button {
@@ -203,121 +187,7 @@ body {
     font-size: 14px;
   }
 
-  /* Ensure proper box sizing */
   * {
     box-sizing: border-box;
-  }
-}
-
-/* Extra small screens (480px and below) */
-@media (max-width: 480px) {
-  body {
-    padding-top: 110px !important;
-    /* Appropriate padding for very small screens */
-  }
-
-  .confirmation-container {
-    margin-top: 15px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding: 15px 10px;
-  }
-
-  .confirmation-content {
-    padding: 30px 15px;
-  }
-
-  .confirmation-title {
-    font-size: 22px;
-    margin-bottom: 15px;
-  }
-
-  .confirmation-subtitle {
-    font-size: 15px;
-    margin-bottom: 12px;
-  }
-
-  .confirmation-detail {
-    font-size: 13px;
-    margin-bottom: 25px;
-  }
-
-  .back-home-button {
-    padding: 12px 24px;
-    font-size: 15px;
-    width: 100%;
-    max-width: 280px;
-  }
-
-  /* Mobile header further compressed */
-  .top-bar img[alt="PC Byte Logo"] {
-    height: 25px;
-  }
-
-  .search-box {
-    min-width: 150px;
-  }
-
-  .icon {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-/* Landscape orientation on mobile */
-@media (max-width: 768px) and (orientation: landscape) {
-  body {
-    padding-top: 100px !important;
-    /* Reduce padding in landscape mode */
-  }
-
-  .confirmation-container {
-    margin: 15px auto;
-  }
-
-  .confirmation-content {
-    padding: 30px 25px;
-  }
-
-  .confirmation-title {
-    font-size: 26px;
-  }
-
-  .confirmation-subtitle {
-    font-size: 17px;
-  }
-
-  .confirmation-detail {
-    font-size: 15px;
-  }
-}
-
-/* Very large mobile screens (tablets in portrait) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .confirmation-container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 30px 20px;
-  }
-
-  .confirmation-content {
-    padding: 50px 30px;
-  }
-
-  .confirmation-title {
-    font-size: 26px;
-  }
-
-  .confirmation-subtitle {
-    font-size: 17px;
-  }
-
-  .confirmation-detail {
-    font-size: 15px;
-  }
-
-  .back-home-button {
-    padding: 15px 32px;
-    font-size: 17px;
   }
 }
