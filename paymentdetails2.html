@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - PCByte</title>
+    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="paymentdetails.css" />
+    <script src="paymentdetails.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="top-bar">
+                <img src="image/Logo.png" alt="PC Byte Logo" onclick="location.href='homepage.html'">
+                <div class="search-box">
+                    <img src="icons/search.svg" alt="Search Icon" class="search-icon">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="icons">
+                    <img src="icons/map-pin.svg" class="icon" alt="Location">
+                    <img src="icons/Account--Streamline-Atlas.svg" class="icon" alt="User">
+                    <a href="shoppingcart.html" class="cart-wrapper">
+                        <img src="icons/shopping-cart.svg" class="icon" alt="Cart">
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <div class="dropdown-wrapper">
+                    <button class="category-button">
+                        <img src="icons/categories.svg" alt="Categories" class="icon" />
+                    </button>
+                    <div class="dropdown-panel">
+                        <ul class="main-menu">
+                            <li class="main-item" data-category="pc-parts">
+                                PC Parts
+                                <div class="mega-menu">
+                                    <div class="submenu-row">
+                                        <div class="submenu-column">
+                                            <h5>Computer Parts</h5>
+                                            <ul>
+                                                <li>Cases</li>
+                                                <li>Cooling</li>
+                                                <li>CPU Processors</li>
+                                                <li>Fans and Accessories</li>
+                                                <li>Graphics Cards / GPU</li>
+                                                <li>Memory (RAM)</li>
+                                                <li>Motherboards</li>
+                                                <li>NUC, Brix & Mini PCs</li>
+                                                <li>Power Supply / PSU</li>
+                                                <li>Sound Cards</li>
+                                                <li>Water Cooling</li>
+                                                <li>Water Cooling Fittings</li>
+                                            </ul>
+                                        </div>
+                                        <div class="submenu-column">
+                                            <h5>Networking</h5>
+                                            <ul>
+                                                <li>Antennas</li>
+                                                <li>Ethernet Over Power / Powerline</li>
+                                                <li>Fiber Convertor</li>
+                                                <li>Modem Routers</li>
+                                                <li>Network Adapters</li>
+                                                <li>Networking Accessories</li>
+                                                <li>Routers</li>
+                                                <li>Switches</li>
+                                                <li>Wifi Range Extenders</li>
+                                                <li>Wireless Access Points (WAP)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="submenu-column">
+                                            <h5>Storage Devices</h5>
+                                            <ul>
+                                                <li>Blank Media Discs</li>
+                                                <li>CD/DVD Burners Optical Drive</li>
+                                                <li>Enclosures & Docking</li>
+                                                <li>External Hard Drives</li>
+                                                <li>External SSD Hard Drives</li>
+                                                <li>Hard Drives / HDD</li>
+                                                <li>NAS - Network Storage</li>
+                                                <li>SSD Hard Drives</li>
+                                                <li>USB Drives & SD Cards</li>
+                                            </ul>
+                                        </div>
+                                        <div class="submenu-column">
+                                            <h5>PC Accessories</h5>
+                                            <ul>
+                                                <li>Add On Cards</li>
+                                                <li>Cables</li>
+                                                <li>Computer Accessories</li>
+                                                <li>Display Adapters</li>
+                                                <li>KVM</li>
+                                                <li>UPS & Power Protection</li>
+                                                <li>USB Hubs</li>
+                                                <li>Video & TV Capture</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="submenu-row">
+                                        <div class="submenu-column">
+                                            <h5>Peripherals</h5>
+                                            <ul>
+                                                <li>Ambient Light</li>
+                                                <li>Graphics Tablet</li>
+                                                <li>Headphones</li>
+                                                <li>Keyboards</li>
+                                                <li>Monitors</li>
+                                                <li>Mouse & Mouse Pads</li>
+                                                <li>Projectors</li>
+                                                <li>Racing Simulators</li>
+                                                <li>Web Cams</li>
+                                            </ul>
+                                        </div>
+                                        <div class="submenu-column">
+                                            <h5>Printers & Scanners</h5>
+                                            <ul>
+                                                <li>3D Printers</li>
+                                                <li>Dot Matrix Printers</li>
+                                                <li>Inkjet Printers</li>
+                                                <li>Laser Engravers</li>
+                                                <li>Laser Printers</li>
+                                                <li>Multifunction Printers</li>
+                                                <li>Paper</li>
+                                                <li>Printer Accessories</li>
+                                                <li>Printer Ink / Cartridges</li>
+                                                <li>Scanners</li>
+                                            </ul>
+                                        </div>
+                                        <div class="submenu-column">
+                                            <h5>Software & Services</h5>
+                                            <ul>
+                                                <li>Accounting & Finance</li>
+                                                <li>Anti Virus & Security</li>
+                                                <li>Business & Office</li>
+                                                <li>Design & illustration</li>
+                                                <li>Mac Software</li>
+                                                <li>Operating Systems</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="main-item">Laptops & Computers</li>
+                            <li class="main-item">Mobile Phones & Digital</li>
+                            <li class="main-item">Household Appliances</li>
+                            <li class="main-item">Kitchenware, Home & Pets</li>
+                            <li class="main-item">Automobile Accessories</li>
+                            <li class="main-item">Sports & Outdoors</li>
+                            <li class="main-item">Toys, Kids & Baby</li>
+                            <li class="main-item">Hobby and Crafts</li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li>Hot Deals</li>
+                    <li>New Arrivals</li>
+                    <li>All Categories</li>
+                    <li>All Brands</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="checkout-container">
+        <h1 class="checkout-title">CheckOut</h1>
+        <div class="checkout-layout">
+            <div class="checkout-form">
+                <h2 class="section-title">Delivery Method</h2>
+                <div class="delivery-options full-width-buttons">
+                    <button class="delivery-btn active">
+                        Delivery
+                    </button>
+                    <button class="delivery-btn">
+                        In Store Pick-Up
+                    </button>
+                </div>
+
+                <h2 class="section-title">Shipping Information</h2>
+                <div class="form-grid">
+                    <input type="text" placeholder="First Name" />
+                    <input type="text" placeholder="Last Name" />
+                    <input type="text" placeholder="Address" class="full-width" />
+                </div>
+
+                <div class="form-three">
+                    <input type="text" placeholder="City" />
+                    <input type="text" placeholder="State" />
+                    <input type="text" placeholder="Postcode" />
+                </div>
+
+                <div class="form-grid">
+                    <input type="email" placeholder="Email" class="full-width" />
+                    <input type="tel" placeholder="Mobile" class="full-width" />
+                </div>
+            </div>
+
+            <div class="order-summary-panel">
+                <h2 class="summary-header">Order Summary</h2>
+                <div class="summary-product">
+                    <img src="image/thumbnail1.png" alt="Product">
+                    <div class="summary-details">
+                        <p class="product-title">Customise your PC & have PCByte build it!</p>
+                        <p class="product-qty">x 1</p>
+                    </div>
+                    <span class="product-price">$198.0</span>
+                </div>
+                <div class="summary-total">
+                    <div class="line"><span>Subtotal</span><span>$198.00</span></div>
+                    <div class="gst-note">Includes GST.</div>
+                </div>
+                <button class="checkout-submit">CheckOut</button>
+                <a href="shoppingcart.html" class="go-back">Go Back</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
