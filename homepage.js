@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   dots.forEach(dot => {
     dot.addEventListener('click', function () {
       const index = parseInt(this.dataset.slide);
-      const offset = index * -750; 
+      const offset = index * -750;
       track.style.transform = `translateX(${offset}px)`;
 
       dots.forEach(d => d.classList.remove('active'));
@@ -33,59 +33,86 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   if (pcPartsItem && megaMenu) {
-    pcPartsItem.addEventListener('mouseenter', function() {
+    pcPartsItem.addEventListener('mouseenter', function () {
       clearTimeout(hoverTimer);
       showMegaMenu();
     });
 
-    pcPartsItem.addEventListener('mouseleave', function() {
+    pcPartsItem.addEventListener('mouseleave', function () {
       hoverTimer = setTimeout(hideMegaMenu, 100);
     });
 
-    megaMenu.addEventListener('mouseenter', function() {
+    megaMenu.addEventListener('mouseenter', function () {
       clearTimeout(hoverTimer);
     });
-    megaMenu.addEventListener('mouseleave', function() {
+    megaMenu.addEventListener('mouseleave', function () {
       hideMegaMenu();
     });
   }
 });
 
-// 购物车计数功能
 let cartCount = 0;
 
 function updateCartCount() {
-    const cartCountElement = document.getElementById('cartCount');
-    if (cartCountElement) {
-        cartCountElement.textContent = cartCount;
-        if (cartCount > 0) {
-            cartCountElement.style.display = 'flex';
-            cartCountElement.classList.add('show');
-        } else {
-            cartCountElement.style.display = 'none';
-            cartCountElement.classList.remove('show');
-        }
+  const cartCountElement = document.getElementById('cartCount');
+  if (cartCountElement) {
+    cartCountElement.textContent = cartCount;
+    if (cartCount > 0) {
+      cartCountElement.style.display = 'flex';
+      cartCountElement.classList.add('show');
+    } else {
+      cartCountElement.style.display = 'none';
+      cartCountElement.classList.remove('show');
     }
+  }
 }
 
-// 为所有"Add To Cart"按钮添加点击事件
-document.addEventListener('click', function(e) {
-    if (e.target.tagName === 'BUTTON' && 
-        e.target.textContent.trim() === 'Add To Cart' && 
-        !e.target.classList.contains('out-of-stock')) {
-        
-        cartCount++;
-        updateCartCount();
-        
-        // 添加视觉反馈
-        e.target.textContent = 'Added!';
-        e.target.style.background = '#28a745';
-        setTimeout(() => {
-            e.target.textContent = 'Add To Cart';
-            e.target.style.background = '#F08703';
-        }, 1000);
-    }
+function addToCart(productId) {
+  const cart = JSON.parse(localStorage.getItem('cart')) || {};
+  if (cart[productId]) {
+    cart[productId]++;
+  } else {
+    cart[productId] = 1;
+  }
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+document.addEventListener('click', function (e) {
+  if (e.target.tagName === 'BUTTON' &&
+    e.target.textContent.trim() === 'Add To Cart' &&
+    !e.target.classList.contains('out-of-stock')) {
+
+    cartCount++;
+    updateCartCount();
+
+    e.target.textContent = 'Added!';
+    e.target.style.background = '#28a745';
+    setTimeout(() => {
+      e.target.textContent = 'Add To Cart';
+      e.target.style.background = '#F08703';
+    }, 1000);
+  }
 });
 
-// 初始化购物车计数（确保初始隐藏）
 updateCartCount();
+
+document.addEventListener('DOMContentLoaded', function () {
+  const cartBtns = document.querySelectorAll('.add-to-cart-btn');
+
+  cartBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      const productKey = this.getAttribute('data-product');
+      let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+      if (!cartItems.includes(productKey)) {
+        cartItems.push(productKey);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      }
+
+      document.getElementById('cartCount').textContent = cartItems.length;
+    });
+  });
+
+  const storedCart = JSON.parse(localStorage.getItem('cartItems')) || [];
+  document.getElementById('cartCount').textContent = storedCart.length;
+});

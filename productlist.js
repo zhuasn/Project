@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
             productCards.forEach(card => {
                 const brand = card.getAttribute('data-brand');
                 if (checkedBrands.length === 0 || checkedBrands.includes(brand)) {
-                    card.style.display = 'flex'; // or 'block' if in list view
+                    card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';
                 }

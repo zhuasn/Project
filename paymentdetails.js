@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         alert("All details are valid. Proceeding to payment...");
-  
+        window.location.href = "orderconfirmation.html";
+        
     });
 });
