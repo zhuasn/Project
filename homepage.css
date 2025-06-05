@@ -810,6 +810,18 @@ section {
     width: 100%;
     height: 190px;
   }
+
+  .featured-categories .section-heading {
+    display: block;
+  }
+
+  .featured-categories .view-all-link {
+    display: none;
+  }
+
+  .featured-categories h2 {
+    margin-bottom: 40px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -895,7 +907,7 @@ section {
   }
 
   .hero {
-    margin: 16px 0 32px 0;
+    margin: 16px 0 0 0;
   }
 
   .hero-content {
@@ -940,7 +952,7 @@ section {
     flex: 1;
     border-radius: 8px;
     overflow: hidden;
-    height:65px
+    height: 65px
   }
 
   .banner-side .banner-1 img,
@@ -968,7 +980,7 @@ section {
   }
 
   .featured-categories {
-    padding: 32px 0;
+    padding: 25px 0;
   }
 
   .featured-categories .section-heading {
@@ -1040,7 +1052,7 @@ section {
   }
 
   section {
-    padding: 32px 0;
+    padding: 25px 0;
   }
 
   .section-heading {
@@ -1298,7 +1310,6 @@ section {
     overflow-x: hidden;
   }
 
-  /* 触摸优化 */
   .product-card,
   .category-item,
   .main-item {
