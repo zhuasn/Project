@@ -556,6 +556,7 @@ section {
   transform: scale(1.05);
   opacity: 0.8;
 }
+
 .nav-links li {
   cursor: pointer;
   font-size: 14px;
@@ -567,6 +568,7 @@ section {
   color: #F08703;
   text-decoration: underline;
 }
+
 .icons .icon {
   transition: transform 0.2s ease, opacity 0.2s ease;
   cursor: pointer;
@@ -576,6 +578,7 @@ section {
   transform: scale(1.1);
   opacity: 0.8;
 }
+
 .dropdown-wrapper {
   position: relative;
 }
@@ -732,32 +735,81 @@ section {
 }
 
 .cart-wrapper {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
 }
 
 .cart-count {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background: #F08703;
-    color: white;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: bold;
-    min-width: 18px;
-    opacity: 0;
-    transform: scale(0);
-    transition: all 0.3s ease;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #F08703;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 18px;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease;
 }
 
 .cart-count.show {
-    opacity: 1;
-    transform: scale(1);
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Surface Pro 7 适配 (1368 x 912) */
+@media (max-width: 1440px) and (min-width: 1200px) {
+  .wrapper {
+    padding: 0 40px;
+  }
+  
+  .hero-content {
+    gap: 15px;
+  }
+  
+  .banner-carousel {
+    width: 680px;
+    height: 380px;
+  }
+  
+  .banner-side {
+    width: 460px;
+  }
+  
+  .banner-side .banner-1,
+  .banner-side .banner-2 {
+    height: 186px;
+  }
+  
+  .carousel-track img {
+    width: 680px;
+    height: 380px;
+  }
+  
+  .product-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+  }
+  
+  .product-card {
+    width: 100%;
+  }
+  
+  .promotion-banners {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+  }
+  
+  .promotion-banners .banner {
+    width: 100%;
+    height: 190px;
+  }
 }
