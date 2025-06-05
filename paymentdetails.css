@@ -202,23 +202,369 @@ input[type="tel"] {
     box-sizing: border-box;
 }
 
-/* Responsive adjustments */
+/* Mobile CSS Patch for Payment Details */
+
+/* Hide mobile checkout button on desktop */
+.mobile-checkout-btn {
+    display: none;
+}
+
 @media (max-width: 768px) {
+
+    /* Fix for content being hidden behind header */
+    body {
+        padding-top: 160px;
+        /* Increase padding to push content down more */
+    }
+
+    /* Container adjustments */
+    .checkout-container {
+        margin: 20px auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        max-width: 100%;
+        padding: 0 15px;
+        margin-top: 0;
+        /* Remove top margin since we added body padding */
+    }
+
+    /* Title styling */
+    .checkout-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    /* Layout changes to single column */
     .checkout-layout {
         flex-direction: column;
-        gap: 30px;
+        gap: 20px;
     }
 
-    .form-grid,
-    .form-three {
-        grid-template-columns: 1fr;
+    /* Form section */
+    .checkout-form {
+        order: 2;
+        /* Move form below summary on mobile */
     }
 
+    /* Section titles */
+    .section-title {
+        font-size: 18px;
+        margin: 15px 0 10px;
+    }
+
+    /* Delivery options - stack vertically */
     .delivery-options {
         flex-direction: column;
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    .delivery-btn {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+
+    /* Form grids - optimize for mobile */
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Two columns for First/Last name */
+        gap: 12px;
+        margin: 15px 0;
+    }
+
+    .form-grid .full-width {
+        grid-column: span 2;
+        /* Address and Email span both columns */
+    }
+
+    /* Keep City, State, Postcode in one row as per UI design */
+    .form-three {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        /* City gets more space */
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    /* Mobile input field */
+    .form-grid input[type="tel"] {
+        grid-column: span 2;
+        /* Mobile number spans both columns */
+    }
+
+    /* Input styling for mobile */
+    .form-grid input,
+    .form-three input {
+        padding: 12px;
+        font-size: 16px;
+        /* Prevents zoom on iOS */
+        border-radius: 8px;
+        border: 1px solid #f08703;
+        /* Thinner border */
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form-grid input:focus,
+    .form-three input:focus {
+        outline: none;
+        border-color: #d87603;
+        box-shadow: 0 0 0 2px rgba(240, 135, 3, 0.1);
+        /* Reduced shadow */
+    }
+
+    /* Order summary adjustments */
+    .order-summary-panel {
+        order: 1;
+        /* Move summary above form on mobile */
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 12px;
+        position: static;
+        border: 1px solid #e0e0e0;
+    }
+
+    /* Hide Order Summary title on mobile */
+    .summary-header {
+        display: none;
+    }
+
+    /* Product summary styling */
+    .summary-product {
+        margin: 15px 0;
+        padding-bottom: 15px;
+        align-items: center;
+    }
+
+    .summary-product img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .summary-details {
+        flex: 1;
+        margin: 0 10px;
+    }
+
+    .product-title {
+        font-size: 14px;
+        line-height: 1.3;
+        margin-bottom: 3px;
+    }
+
+    .product-qty {
+        font-size: 12px;
+    }
+
+    .product-price {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    /* Summary total */
+    .summary-total .line {
+        font-size: 16px;
+        margin: 8px 0;
+    }
+
+    .gst-note {
+        font-size: 11px;
+        margin-bottom: 20px;
+    }
+
+    /* Hide buttons in summary panel on mobile */
+    .order-summary-panel .checkout-submit,
+    .order-summary-panel .go-back {
+        display: none;
+    }
+
+    /* Show and style mobile checkout button only on mobile */
+    .mobile-checkout-btn {
+        display: block !important;
+        width: 100%;
+        padding: 16px;
+        background-color: #f08703;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-radius: 12px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        -webkit-appearance: none;
+        appearance: none;
+        touch-action: manipulation;
+        box-sizing: border-box;
+    }
+
+    .mobile-checkout-btn:hover {
+        background-color: #d87603;
+    }
+
+    .mobile-checkout-btn:active {
+        transform: translateY(1px);
+    }
+
+    .checkout-submit:active {
+        transform: translateY(1px);
+    }
+
+    .go-back {
+        font-size: 14px;
+        padding: 10px;
+        display: block;
+        text-align: center;
+    }
+
+    /* Header adjustments for mobile */
+    .wrapper {
+        padding: 0 15px;
+    }
+
+    .top-bar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .top-bar img[alt="PC Byte Logo"] {
+        height: 30px;
+        width: auto;
+    }
+
+    .search-box {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .icons {
+        gap: 15px;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Navigation adjustments */
+    .nav-bar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        /* Hide on mobile to save space */
+    }
+
+    .category-button {
+        padding: 8px 12px;
+    }
+
+    /* Improved touch targets */
+    button,
+    input[type="submit"],
+    .delivery-btn {
+        min-height: 44px;
+        /* iOS recommended minimum */
+        touch-action: manipulation;
+    }
+
+    /* Prevent horizontal scroll */
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    body {
+        padding-top: 140px;
+        /* Adjust for smaller screens */
+    }
+
+    .checkout-container {
+        margin: 15px;
+        padding: 0 10px;
+    }
+
+    .checkout-title {
+        font-size: 22px;
+    }
+
+    .section-title {
+        font-size: 16px;
     }
 
     .order-summary-panel {
-        position: static;
+        padding: 15px;
+    }
+
+    .form-grid input,
+    .form-three input {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #f08703;
+        /* Keep thin border */
+    }
+
+    /* Adjust three-column layout for very small screens */
+    .form-three {
+        grid-template-columns: 1.2fr 0.8fr 0.8fr;
+        gap: 6px;
+    }
+
+    .summary-product img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .product-title {
+        font-size: 13px;
+    }
+}
+
+/* Landscape orientation on small screens */
+@media (max-width: 768px) and (orientation: landscape) {
+    body {
+        padding-top: 100px;
+        /* Reduce padding in landscape */
+    }
+
+    .checkout-layout {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .checkout-form {
+        order: 1;
+        flex: 1;
+    }
+
+    .order-summary-panel {
+        order: 2;
+        width: 300px;
+        flex-shrink: 0;
+    }
+
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-three {
+        grid-template-columns: 1.5fr 1fr 1fr;
     }
 }
