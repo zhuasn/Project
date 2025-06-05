@@ -1,18 +1,24 @@
 document.addEventListener('DOMContentLoaded', function () {
   const track = document.getElementById('carouselTrack');
   const dots = document.querySelectorAll('.carousel-dot');
+  const slides = track.querySelectorAll('img');
 
   dots.forEach(dot => {
     dot.addEventListener('click', function () {
       const index = parseInt(this.dataset.slide);
-      const offset = index * -750;
+
+      // ❗获取实际宽度而非写死值
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      const offset = index * -slideWidth;
+
       track.style.transform = `translateX(${offset}px)`;
 
+      // 更新圆点状态
       dots.forEach(d => d.classList.remove('active'));
       this.classList.add('active');
     });
   });
-
+  
   const dropdownWrapper = document.querySelector('.dropdown-wrapper');
   const dropdownPanel = document.querySelector('.dropdown-panel');
   const pcPartsItem = document.querySelector('.main-item[data-category="pc-parts"]');
