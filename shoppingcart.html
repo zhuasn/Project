@@ -165,61 +165,63 @@
         </div>
     </header>
 
-    <main class="wrapper shopping-cart-page">
+    <div class="shopping-cart-page">
         <h1 class="cart-title">Your Cart</h1>
-
         <div class="cart-layout">
             <div class="cart-items">
                 <div class="cart-item">
-                    <img src="image/1.png" alt="Gaming PC" class="cart-thumb">
+                    <img class="cart-thumb" src="image/1.png" alt="Product Image">
                     <div class="item-details">
-                        <h2 class="item-name">White Gaming PC i7 RTX4060 1TB SSD 32GB RAM</h2>
-                        <p class="in-stock">In Stock</p>
+                        <div class="item-name">Customise your PC & have PCByte build it!</div>
+                        <div class="in-stock">In stock</div>
                     </div>
                     <div class="item-controls">
                         <div class="qty-control">
                             <button class="qty-btn">-</button>
-                            <input type="text" class="qty-input" value="1">
+                            <input type="text" class="qty-input" value="1" />
                             <button class="qty-btn">+</button>
                         </div>
-                        <span class="item-price">$198</span>
+                        <div class="item-price">$198</div>
                         <button class="remove-icon">×</button>
                     </div>
                 </div>
                 <div class="clear-cart">Clear Cart</div>
             </div>
 
-            <aside class="order-summary">
-                <div class="summary-box">
-                    <h2 class="summary-title">Total</h2>
-                    <div class="summary-line">
-                        <span>Subtotal</span>
-                        <span>$198</span>
+            <div class="cart-sidebar">
+                <aside class="order-summary">
+                    <div class="summary-box">
+                        <h2 class="summary-title">Total</h2>
+                        <div class="summary-line">
+                            <span>Subtotal</span>
+                            <span class="summary-price">$198</span>
+                        </div>
+                        <div class="summary-note">Includes GST.</div>
                     </div>
-                    <div class="summary-note">Includes GST.</div>
-                </div>
-                <button class="checkout-btn">CheckOut</button>
+                    <button class="checkout-btn">CheckOut</button>
+                </aside>
 
                 <div class="freight-estimate">
                     <p class="estimate-title">
                         Estimated Freight Calculator
                         <img src="icons/info.svg" alt="Info" class="info-icon">
                     </p>
-                    <p class="estimate-desc">We're here to make your life easier. Get an estimate on how much delivery
-                        may cost.</p>
+                    <p class="estimate-desc">
+                        We're here to make your life easier. Get an estimate on how much delivery may cost.
+                    </p>
                     <div class="estimate-input">
-                        <input type="text" placeholder="Postcode">
+                        <input type="text" placeholder="Postcode" />
                         <button class="estimate-btn">Get Estimate</button>
                     </div>
                 </div>
 
                 <div class="payment-logos">
-                    <img src="image/payment.png" alt="Payments Accepted">
+                    <img src="image/payment.png" alt="Payments Accepted" />
                 </div>
-            </aside>
+            </div>
         </div>
-    </main>
-    
+    </div>
+
     <footer>
         <div class="footer-topbar">
             <p class="help-text">We're here to help! Click here to contact Customer Service</p>
