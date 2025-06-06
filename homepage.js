@@ -7,13 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
     dot.addEventListener('click', function () {
       const index = parseInt(this.dataset.slide);
 
-      // ❗获取实际宽度而非写死值
       const slideWidth = slides[0].getBoundingClientRect().width;
       const offset = index * -slideWidth;
 
       track.style.transform = `translateX(${offset}px)`;
 
-      // 更新圆点状态
       dots.forEach(d => d.classList.remove('active'));
       this.classList.add('active');
     });

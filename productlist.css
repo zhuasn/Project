@@ -919,7 +919,6 @@ header {
     overflow-x: hidden;
   }
 
-  /* 移动端隐藏hover效果 */
   .product-card:hover {
     transform: none;
     box-shadow: none;
