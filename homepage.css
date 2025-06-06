@@ -542,7 +542,6 @@ section {
 .view-all-card {
   transition: box-shadow 0.3s ease;
   cursor: pointer;
-  display: block;
 }
 
 .view-all-card:hover {
@@ -822,6 +821,10 @@ section {
 
   .featured-categories h2 {
     margin-bottom: 40px;
+  }
+
+  .featured-categories .view-all-link {
+    display: none;
   }
 }
 
